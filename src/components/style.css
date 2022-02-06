@@ -1,0 +1,16 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    padding: 50px;
+}
+
+p {
+    cursor: pointer;
+}
+
+.complete {
+    text-decoration: line-through;
+}
