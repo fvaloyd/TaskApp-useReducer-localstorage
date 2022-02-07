@@ -2,20 +2,20 @@
 export const taskReducer = ( state= [], action ) => {
     
     switch ( action.type ) {
-        case 'add':
+        case 'ADD':
             return [ ...state, action.payload ];
 
-        case 'delete':
+        case 'DELETE':
             return state.filter( task => task.id !== action.payload );
 
-        case 'toggle':
+        case 'TOGGLE':
             return state.map(task => 
                 (task.id === action.payload)
                 ? {...task, done: !task.done}
                 : task
             )
 
-        case 'toggle-old':
+        case 'TOGGLE_OLD':
             return state.map(task => {
                 if(task.id === action.payload){
                     return {
